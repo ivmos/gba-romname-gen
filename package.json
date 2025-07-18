@@ -1,15 +1,23 @@
 {
   "name": "gba-romname-gen",
-  "version": "1.0.0",
-  "description": "GBA romnames.lst file generator for EZ4 Client",
+  "version": "2.0.0",
+  "description": "Generates a romname.lst file by scanning a directory of G.B.A. ROM files.",
   "main": "gba-romname-gen.js",
+  "type": "module",
+  "bin": {
+    "gba-romname-gen": "gba-romname-gen.js"
+  },
   "scripts": {
+    "start": "node gba-romname-gen.js",
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pedro Ladaria <pedro.ladaria@gmail.com>",
+  "author": "Pedro Ladaria <pedro.ladaria@gmail.com> (Updated by Gemini)",
   "license": "MIT",
-  "dependencies": {
-    "fs-walk": "0.0.1",
-    "iconv-lite": "^0.4.13"
+  "devDependencies": {
+    "prettier": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
